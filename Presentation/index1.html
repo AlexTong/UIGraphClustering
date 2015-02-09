@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        var serviceURL  = "http://localhost:8080/post"
+    </script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <!--
+    <link rel="stylesheet" href="next-blue.css">
+    <link rel="stylesheet" href="next-topology.css">
+    <script src="next.js"></script>
+    <script src="next-topology.js"></script>
+    -->
+
+    <script type="text/javascript" src="http://10.75.161.96:8080/jenkins/job/NeXt-UI/ws/lib/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="http://10.75.161.96:8080/jenkins/job/NeXt-Core/lastSuccessfulBuild/artifact/dest/next-core.js"></script>
+    <script type="text/javascript" src="http://10.75.161.96:8080/jenkins/job/NeXt-UI/lastSuccessfulBuild/artifact/dest/js/next-ui.js"></script>
+    <script type="text/javascript" src="http://10.75.161.96:8080/jenkins/job/UI_Component/lastSuccessfulBuild/artifact/dest/js/next-components.js"></script>
+    <link rel="stylesheet" href="http://10.75.161.96:8080/jenkins/job/NeXt-UI/lastSuccessfulBuild/artifact/dest/css/next-blue.css"/>
+    <script type="text/javascript" src="../lib/GraphGenerator.js"></script>
+    <link rel="stylesheet" href="../src/less/next-graphic.css"/>
+    <script type="text/javascript" src="http://10.75.161.96:8080/jenkins/job/Next-Graphic/lastSuccessfulBuild/artifact/dest/js/next-graphic.js"></script>
+
+
+
+
+    <script src="RightPageTopologyView.js"></script>
+    <script src="ActionPanelView.js"></script>
+    <script src="LeftPageTopologyView.js"></script>
+    <script src="LeftPageView.js"></script>
+    <script src="RightPageView.js"></script>
+    <script src="MainViewModel.js"></script>
+    <script src="MainPageView.js"></script>
+    <script src="Application.js"></script>
+    <script src="JsonPageView.js"></script>
+
+
+
+
+    <style>
+        html, body {
+            margin: 0;
+            min-height: 100%;
+        }
+        body {
+            position: relative; /* needed for the overlay to extend when you scroll */
+            /* general styles */
+
+            font-family: 'Open Sans', sans-serif;
+            background: black;
+            color: #fff;
+        }
+        .main {
+            background : grey;
+            height : 100%;
+            width: 100%;
+        }
+        .sampleData {
+            float : left;
+            margin : 2px;
+            border : 2px solid black;
+            background : white;
+            height : 100%;
+            width: 48%;
+        }
+        .clusteredData {
+            float : left;
+            margin : 2px;
+            border : 2px solid black;
+            background : white;
+            height : 100%;
+            width: 49%;
+        }
+        .buttonStyle {
+            float:left;
+            margin-left : 2px;
+            margin-right : 2px;
+        }
+        .msgSuccessStyle {
+            border-top : 2px solid black;
+            text-align : center ;
+            color : green;
+            background: yellow;
+            padding : 5px;
+            margin : 5px;
+        }
+        .msgErrorStyle {
+            border-top : 2px solid black;
+            text-align : center ;
+            color : red;
+            background: yellow;
+            padding : 5px;
+            margin : 5px;
+        }
+        .textBox {
+            margin : 10px;
+            padding : 5px;
+        }
+        .addLinkDiv {
+            border-bottom : 2px solid black;
+            padding : 5px;
+            margin : 5px;
+        }
+        .nodeDiv {
+            border-top : 2px solid black;
+            border-bottom : 2px solid black;
+            padding : 5px;
+            margin : 5px;
+        }
+        .addNodeButton {
+            margin : 5px;
+        }
+        .deleteDiv {
+            float : right;
+        }
+        .clusterButton {
+            margin-top : 2px;
+            width : 2em;
+            height : 700px;
+        }
+        .leftPageTopology {
+            border-bottom : 2px solid black;
+            padding: 2px;
+            margin: 2px;
+        }
+        .leftSaveJsonDiv {
+            margin : 5px;
+        }
+        .leftSaveJsonButton {
+            width : 100%
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 10;
+        }
+        .tommy {
+            width : 80%;
+            height : 80%;
+            line-height: normal;
+            position: fixed;
+            top: 50%;
+            left: 20%;
+            margin-top: -100px;
+            margin-left: -150px;
+            background-color: rgba(0,0,0,0.5);
+            border-radius: 5px;
+            text-align: center;
+            z-index: 11; /* 1px higher than the overlay layer */
+        }
+        .content {
+            margin: 30px;
+        }
+        textArea {
+            resize : none;
+            height : 50%;
+            width : 100%;
+        }
+        .hideOverlay {
+            display : none;
+        }
+        .backButton {
+            float : right;
+        }
+        .rightSaveJsonDiv {
+            margin : 5px;
+        }
+        label {
+            color : black;
+        }
+        .rightPageTopology {
+            border-bottom : 2px solid black;
+            padding: 2px;
+            margin: 2px;
+        }
+        .loadJsonDiv {
+            border-bottom: 2px solid black;
+            padding: 5px;
+            margin: 5px;
+        }
+
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+</body>
+</html>
