@@ -72,7 +72,7 @@
                             if(data.nodes && data.links) {
                                 this.fileJsonData(data)
                             } else {
-                                alert('Incorrect JSON')
+                                alert('Incorrect JSON as it do not contain nodes and links')
                             }
                         } catch(err) {
                             alert('Incorrect JSON')
