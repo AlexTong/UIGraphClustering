@@ -20,8 +20,14 @@
                         identityKey: 'id',
                         data: '{topologyData}',
                         nodeConfig: {
-                            label: 'model.id',
-                            iconType : 'router'
+                            label: function(vertex) {
+                                console.log("id : " + vertex['_data']['id'] + " Role : " + vertex['_data']['role'][0])
+                                return "id : " + vertex['_data']['id'] + " Role : " + vertex['_data']['role'][0]
+                            },
+                            color: function(node, model) {
+                                console.log(node['_data']['role'])
+                                return colorDict[node['_data']['role'].toLowerCase()]
+                            }
                         }
                     }
                 }
