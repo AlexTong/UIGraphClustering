@@ -28,6 +28,12 @@
                                 console.log(node['_data']['role'])
                                 return colorDict[node['_data']['role'].toLowerCase()]
                             }
+                        },
+                        nodeSetConfig: {
+                            label: function(vertex) {
+                                //console.log("id : " + vertex['_data']['id'] + " Role : " + vertex['_data']['role'][0])
+                                return "id : " + vertex['_data']['id']
+                            }
                         }
                     }
                 }
